@@ -3,6 +3,8 @@
 
 #include "svg.h"
 #include "qry.h"
+#include "fila.h"
+#include "pilha.h"
 
 
 /*

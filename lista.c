@@ -29,7 +29,7 @@ Lista create()
     return lista;
 }
 
-void insert(Lista l, Info info) 
+No insert(Lista l, Info info) 
 {
     ListaStruct* lista = (ListaStruct*) l;
     NoStruct* node = (NoStruct*) malloc(sizeof(NoStruct));
@@ -52,9 +52,38 @@ void insert(Lista l, Info info)
 
     lista->tamanho++;
 
+    return node;
+
 }
 
-void insertAfter(Lista lista, No node, Info info)
+No insertFirst(Lista l, Info info) 
+{
+    ListaStruct* lista = (ListaStruct*) l;
+    NoStruct* node = (NoStruct*) malloc(sizeof(NoStruct));
+
+    node->info = info;
+
+    if(lista->primeiro == NULL) 
+    {
+        node->proximo = NULL;
+        lista->primeiro = node;
+        lista->ultimo = node;
+    } 
+    else 
+    {
+        lista->primeiro->anterior = node;
+        node->proximo = lista->primeiro;
+    }
+
+    node->anterior = NULL;
+    lista->primeiro = node;
+
+    lista->tamanho++;
+    return node;
+
+}
+
+No insertAfter(Lista lista, No node, Info info)
 {
     ListaStruct* lis = (ListaStruct*) lista;
     NoStruct* nod = (NoStruct*) node;
@@ -79,13 +108,14 @@ void insertAfter(Lista lista, No node, Info info)
     }
 
     lis->tamanho++;
+    return novo;
 
 }
 
-void insertBefore(Lista lista, No node, Info info)
+No insertBefore(Lista lista, No node, Info info)
 {
     ListaStruct* lis = (ListaStruct*) lista;
-    NoStruct *nod = (NoStruct*) node;
+    NoStruct* nod = (NoStruct*) node;
 
     NoStruct* novo = (NoStruct*) malloc(sizeof(NoStruct));
     novo->info = info;
@@ -107,6 +137,7 @@ void insertBefore(Lista lista, No node, Info info)
     }
 
     lis->tamanho++;
+    return novo;
 
 }
 

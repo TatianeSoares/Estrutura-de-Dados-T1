@@ -1,5 +1,5 @@
 # Name of the project
-PROJ_NAME=siguel
+PROJ_NAME=t1
 
 # .c files
 C_SOURCE=$(wildcard *.c)

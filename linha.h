@@ -13,37 +13,42 @@ Linha criaLinha(char id[], double x1, double y1, double x2, double y2, char cor[
 
 /*
 *Obtem o eixo x1 da linha
-*Precisa de um void pointer casos como parametro
+*Precisa de um void pointer linha como parametro
 *Retorna o eixo x1 (x1) da linha
 */
 double getLinhaX1(Linha linha);
 
 /*
 *Obtem o eixo x2 da linha
-*Precisa de um void pointer casos como parametro
+*Precisa de um void pointer linha como parametro
 *Retorna o eixo x2 (x2) da linha
 */
 double getLinhaX2(Linha linha);
 
 /*
 *Obtem o eixo y1 da linha
-*Precisa de um void pointer casos como parametro
+*Precisa de um void pointer linha como parametro
 *Retorna o eixo y1 (y1) da linha
 */
 double getLinhaY1(Linha linha);
 
 /*
 *Obtem o eixo y2 da linha
-*Precisa de um void pointer casos como parametro
+*Precisa de um void pointer linha como parametro
 *Retorna o eixo y2 (y2) da linha
 */
 double getLinhaY2(Linha linha);
 
+/*
+*Obtem o id da linha
+*Precisa de um void pointer linha como parametro
+*Retorna o id da linha
+*/
 char* getLinhaId(Linha linha);
 
 /*
 *Obtem o a cor para a linha
-*Precisa de um void pointer casos como parametro
+*Precisa de um void pointer linha como parametro
 *Retorna a cor (cor) da linha
 */
 char* getLinhaCor(Linha linha);
@@ -74,8 +79,14 @@ void setLinhaY1(Linha linha, double y1);
 *Precisa de um void pointer Linha e de um valor para o eixo y2
 *Não retorna nada
 */
+
 void setLinhaY2(Linha linha, double y2);
 
+/*
+*Armazena um valor que é passado como parametro no id também passado por parametro
+*Precisa de um void pointer Linha e de um valor para o id
+*Não retorna nada
+*/
 void setLinhaId(Linha linha, char id[]);
 
 /*

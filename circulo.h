@@ -62,6 +62,11 @@ char* getCirculoCorb(Circulo circulo);
 */
 char* getCirculoCorp(Circulo circulo);
 
+/*
+*Obtem o ponto de um circulo
+*Precisa de um void pointer circulo como parametro
+*Retorna o ponto do circulo
+*/
 Ponto getCirculoPonto(Circulo circulo);
 
 /*
@@ -113,6 +118,11 @@ void setCirculoCorb(Circulo circulo, char corb[]);
 */
 void setCirculoCorp(Circulo circulo, char corp[]);
 
+/*
+*Armazena um valor que é passado como parametro no ponto do circulo também passado por parametro
+*Precisa de um void pointer circulo e de um void poiter ponto
+*Não retorna nada
+*/
 void setCirculoPonto(Circulo circulo, Ponto p);
 
 #endif

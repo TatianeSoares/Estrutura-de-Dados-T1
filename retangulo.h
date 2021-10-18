@@ -69,6 +69,11 @@ char* getRetanguloCorb(Retangulo retangulo);
 */
 char* getRetanguloCorp(Retangulo retangulo);
 
+/*
+*Obtem o ponto de um retangulo
+*Precisa de um void pointer retangulo como parametro
+*Retorna o ponto do retangulo
+*/
 Ponto getRetanguloPonto(Retangulo retangulo);
 
 /*
@@ -126,6 +131,11 @@ void setRetanguloCorb(Retangulo retangulo, char corb[]);
 */
 void setRetanguloCorp(Retangulo retangulo, char corp[]);
 
+/*
+*Armazena um valor que é passado como parametro no ponto do retangulo também passado por parametro
+*Precisa de um void pointer retangulo e de um void poiter ponto
+*Não retorna nada
+*/
 void setRetanguloPonto(Retangulo retangulo, Ponto p);
 
 #endif

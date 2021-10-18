@@ -54,3 +54,20 @@ No buscarLinha(Lista listasObjetos[], char id[])
 
     return node=NULL; 
 } 
+
+No buscarTexto(Lista listasObjetos[], char id[])
+{
+    No node;
+    Info info;
+
+    for(node = getFirst(listasObjetos[3]); node != NULL; node = getNext(node))
+    {
+        info = getInfo(node);
+        if(strcmp(getTextoI(info), id) == 0)
+        {
+            return node;
+        }
+    }
+
+    return node=NULL; 
+} 

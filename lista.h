@@ -18,25 +18,32 @@ typedef void* Info;
 Lista create();
 
 /*
-*Insere um no em uma lista
+*Insere um no no fim de uma lista
 *Precisa de um void pointer info e de um void pointer lista
-*Não retorna nada
+*Retorna um node.
 */
-void insert(Lista l, Info info);
+No insert(Lista l, Info info);
+
+/*
+*Insere um no no inicio de uma lista
+*Precisa de um void pointer info e de um void pointer lista
+*Retorna um node.
+*/
+No insertFirst(Lista l, Info info);
 
 /*
 *Insere um elemento depois
 *Precisa da lista, do no a ser inserido e das informacoes
-*Retorna nada.
+*Retorna um node.
 */
-void insertAfter(Lista lista, No node, Info info);
+No insertAfter(Lista lista, No node, Info info);
 
 /*
 *Insere um elemento antes
 *Precisa da lista, do no a ser inserido e das informacoes
-*Retorna nada.
+*Retorna um node.
 */
-void insertBefore(Lista lista, No node, Info info);
+No insertBefore(Lista lista, No node, Info info);
 
 /*
 *Cria um no

@@ -91,5 +91,6 @@ Pinfo desempilha(Pilha pilha)
 
     p->tamanho--;
     free(aux);
+    
     return info;
 }

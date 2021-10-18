@@ -55,6 +55,11 @@ char* getTextoCorp(Texto texto);
 */
 char* getTextoTxto(Texto texto);
 
+/*
+*Obtem o ponto de um texto
+*Precisa de um void pointer texto como parametro
+*Retorna o ponto do texto
+*/
 Ponto getTextoPonto(Texto texto);
 
 /*
@@ -99,6 +104,11 @@ void setTextoCorp(Texto texto, char corp[]);
 */
 void setTextoTxto(Texto texto, char txto[]);
 
+/*
+*Armazena um valor que é passado como parametro no ponto do texto também passado por parametro
+*Precisa de um void pointer texto e de um void poiter ponto
+*Não retorna nada
+*/
 void setTextoPonto(Texto texto, Ponto p);
 
 #endif

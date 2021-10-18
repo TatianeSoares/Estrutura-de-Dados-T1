@@ -58,6 +58,7 @@ filaInfo retiraFila(Fila fila)
     }
 
     free(aux);
+    
     return info;
 }
 

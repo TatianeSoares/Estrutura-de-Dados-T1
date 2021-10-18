@@ -8,7 +8,7 @@
 #include "retangulo.h"
 /*
     *Inicia o arquivo svg colocando o comando necessario nele
-    *Apenas o arquivo svg a ser aberto e passado como parametro
+    *Apenas o arquivo svg a ser aberto é passado como parametro
     *Retorna nada, fecha o svg apenas.
     * 
 */
@@ -47,7 +47,7 @@ void escreveTexto(Texto texto, FILE* arqSvg);
 void desenhaLinha(Linha linha, FILE* arqSvg);
 
 /*
-    *Imprime os elementos guardados na lista no arquivo svg feito para o qry
+    *Imprime os elementos guardados na lista no arquivo svg
     *Precisa das listas e do arquivo a ser editado
     *Retorna nada.
     * 
@@ -55,9 +55,20 @@ void desenhaLinha(Linha linha, FILE* arqSvg);
 
 void desenhaGeoSvg(FILE* arqSvg, Lista listaObjeto[]);
 
+/*
+    *Imprime os elementos guardados na lista no arquivo svg feito para o qry
+    *Precisa das listas e do arquivo a ser editado
+    *Retorna nada.
+    * 
+*/
 void gerarSvgQry(Lista listaObjeto[], FILE *saidaSvg, Lista listasQry[]);
 
+/*
+    *Finaliza o arquivo svg colocando o comando necessario nele
+    *Apenas o arquivo svg a ser fechado é passado como parametro
+    *Retorna nada, fecha o svg apenas.
+    * 
+*/
 void finalizaSvg(FILE* arqSvg);
-
 
 #endif
